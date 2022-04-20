@@ -1,18 +1,19 @@
 
+
 import 'dart:io';
 
 import 'package:audiotagger/audiotagger.dart';
 import 'package:audiotagger/models/tag.dart';
-import 'package:CustomWidgets/custom_physics.dart';
-import 'package:CustomWidgets/data_search.dart';
-import 'package:CustomWidgets/empty_screen.dart';
-import 'package:CustomWidgets/gradient_containers.dart';
-import 'package:CustomWidgets/miniplayer.dart';
-import 'package:CustomWidgets/playlist_head.dart';
-import 'package:CustomWidgets/snackbar.dart';
-import 'package:Helpers/picker.dart';
-import 'package:Screens/Library/liked.dart';
-import 'package:Screens/Player/audioplayer.dart';
+import 'package:soulsound/CustomWidgets/custom_physics.dart';
+import 'package:soulsound/CustomWidgets/data_search.dart';
+import 'package:soulsound/CustomWidgets/empty_screen.dart';
+import 'package:soulsound/CustomWidgets/gradient_containers.dart';
+import 'package:soulsound/CustomWidgets/miniplayer.dart';
+import 'package:soulsound/CustomWidgets/playlist_head.dart';
+import 'package:soulsound/CustomWidgets/snackbar.dart';
+import 'package:soulsound/Helpers/picker.dart';
+import 'package:soulsound/Screens/Library/liked.dart';
+import 'package:soulsound/Screens/Player/audioplayer.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';

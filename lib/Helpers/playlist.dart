@@ -1,7 +1,8 @@
 
+
 import 'package:audio_service/audio_service.dart';
-import 'package:Helpers/mediaitem_converter.dart';
-import 'package:Helpers/songs_count.dart' as songs_count;
+import 'package:soulsound/Helpers/mediaitem_converter.dart';
+import 'package:soulsound/Helpers/songs_count.dart' as songs_count;
 import 'package:hive/hive.dart';
 
 bool checkPlaylist(String name, String key) {

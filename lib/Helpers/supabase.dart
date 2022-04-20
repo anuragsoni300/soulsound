@@ -1,4 +1,5 @@
 
+
 import 'package:supabase/supabase.dart';
 
 class SupaBase {

@@ -1,9 +1,10 @@
 
+
 import 'package:audio_service/audio_service.dart';
-import 'package:CustomWidgets/snackbar.dart';
-import 'package:Helpers/mediaitem_converter.dart';
-import 'package:Helpers/playlist.dart';
-import 'package:Screens/Player/audioplayer.dart';
+import 'package:soulsound/CustomWidgets/snackbar.dart';
+import 'package:soulsound/Helpers/mediaitem_converter.dart';
+import 'package:soulsound/Helpers/playlist.dart';
+import 'package:soulsound/Screens/Player/audioplayer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:get_it/get_it.dart';

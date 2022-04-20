@@ -1,11 +1,12 @@
 
+
 import 'package:audio_service/audio_service.dart';
-import 'package:CustomWidgets/collage.dart';
-import 'package:CustomWidgets/gradient_containers.dart';
-import 'package:CustomWidgets/snackbar.dart';
-import 'package:CustomWidgets/textinput_dialog.dart';
-import 'package:Helpers/audio_query.dart';
-import 'package:Helpers/playlist.dart';
+import 'package:soulsound/CustomWidgets/collage.dart';
+import 'package:soulsound/CustomWidgets/gradient_containers.dart';
+import 'package:soulsound/CustomWidgets/snackbar.dart';
+import 'package:soulsound/CustomWidgets/textinput_dialog.dart';
+import 'package:soulsound/Helpers/audio_query.dart';
+import 'package:soulsound/Helpers/playlist.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:hive/hive.dart';

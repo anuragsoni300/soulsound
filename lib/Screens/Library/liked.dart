@@ -1,16 +1,17 @@
 
-import 'package:CustomWidgets/collage.dart';
-import 'package:CustomWidgets/custom_physics.dart';
-import 'package:CustomWidgets/data_search.dart';
-import 'package:CustomWidgets/download_button.dart';
-import 'package:CustomWidgets/empty_screen.dart';
-import 'package:CustomWidgets/gradient_containers.dart';
-import 'package:CustomWidgets/miniplayer.dart';
-import 'package:CustomWidgets/playlist_head.dart';
-import 'package:CustomWidgets/song_tile_trailing_menu.dart';
-import 'package:Helpers/songs_count.dart' as songs_count;
-import 'package:Screens/Library/show_songs.dart';
-import 'package:Screens/Player/audioplayer.dart';
+
+import 'package:soulsound/CustomWidgets/collage.dart';
+import 'package:soulsound/CustomWidgets/custom_physics.dart';
+import 'package:soulsound/CustomWidgets/data_search.dart';
+import 'package:soulsound/CustomWidgets/download_button.dart';
+import 'package:soulsound/CustomWidgets/empty_screen.dart';
+import 'package:soulsound/CustomWidgets/gradient_containers.dart';
+import 'package:soulsound/CustomWidgets/miniplayer.dart';
+import 'package:soulsound/CustomWidgets/playlist_head.dart';
+import 'package:soulsound/CustomWidgets/song_tile_trailing_menu.dart';
+import 'package:soulsound/Helpers/songs_count.dart' as songs_count;
+import 'package:soulsound/Screens/Library/show_songs.dart';
+import 'package:soulsound/Screens/Player/audioplayer.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

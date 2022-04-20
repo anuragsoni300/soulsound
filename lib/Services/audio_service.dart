@@ -1,12 +1,14 @@
+
+
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
 import 'package:audio_service/audio_service.dart';
 import 'package:audio_session/audio_session.dart';
-import 'package:APIs/api.dart';
-import 'package:Helpers/mediaitem_converter.dart';
-import 'package:Screens/Player/audioplayer.dart';
+import 'package:soulsound/APIs/api.dart';
+import 'package:soulsound/Helpers/mediaitem_converter.dart';
+import 'package:soulsound/Screens/Player/audioplayer.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:just_audio/just_audio.dart';
@@ -25,6 +27,10 @@ class AudioPlayerHandlerImpl extends BaseAudioHandler
   late AudioPlayer? _player;
   late String preferredQuality;
   late bool resetOnSkip;
+  // late String? stationId = '';
+  // late List<String> stationNames = [];
+  // late String stationType = 'entity';
+  // late bool cacheSong;
   final _equalizer = AndroidEqualizer();
 
   Box downloadsBox = Hive.box('downloads');
@@ -107,6 +113,8 @@ class AudioPlayerHandlerImpl extends BaseAudioHandler
         .toString();
     resetOnSkip =
         Hive.box('settings').get('resetOnSkip', defaultValue: false) as bool;
+    // cacheSong =
+    //     Hive.box('settings').get('cacheSong', defaultValue: false) as bool;
     recommend =
         Hive.box('settings').get('autoplay', defaultValue: true) as bool;
     loadStart =

@@ -1,23 +1,11 @@
 
+
 import 'dart:async';
 import 'dart:io';
 import 'dart:math';
 import 'dart:ui' as ui;
 
 import 'package:audio_service/audio_service.dart';
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flip_card/flip_card.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' show rootBundle;
-import 'package:get_it/get_it.dart';
-import 'package:hive/hive.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-import 'package:on_audio_query/on_audio_query.dart';
-import 'package:path_provider/path_provider.dart';
-import 'package:rxdart/rxdart.dart';
-import 'package:share_plus/share_plus.dart';
-import 'package:sliding_up_panel/sliding_up_panel.dart';
 import 'package:soulsound/CustomWidgets/add_playlist.dart';
 import 'package:soulsound/CustomWidgets/animated_text.dart';
 import 'package:soulsound/CustomWidgets/copy_clipboard.dart';
@@ -35,6 +23,20 @@ import 'package:soulsound/Helpers/lyrics.dart';
 import 'package:soulsound/Helpers/mediaitem_converter.dart';
 import 'package:soulsound/Screens/Common/song_list.dart';
 import 'package:soulsound/Screens/Search/albums.dart';
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flip_card/flip_card.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart' show rootBundle;
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:get_it/get_it.dart';
+import 'package:hive/hive.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:on_audio_query/on_audio_query.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:rxdart/rxdart.dart';
+import 'package:share_plus/share_plus.dart';
+import 'package:sliding_up_panel/sliding_up_panel.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class PlayScreen extends StatefulWidget {

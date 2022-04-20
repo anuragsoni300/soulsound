@@ -6,7 +6,7 @@ An Open-Source Music Player App for all your needs!
 
 [![made-with-flutter](https://img.shields.io/badge/Made%20with-Flutter-1f425f.svg)](https://flutter.dev/) ![Release](https://img.shields.io/github/v/release/Sangwan5688/BlackHole) ![Downloads](https://img.shields.io/github/downloads/Sangwan5688/BlackHole/total)
 [![Build](https://github.com/Sangwan5688/BlackHole/actions/workflows/flutter.yml/badge.svg)](https://github.com/Sangwan5688/BlackHole/actions/workflows/flutter.yml)
-[![Translation-Status](https://hosted.weblate.org/widgets/blackhole/-/translations/svg-badge.svg)](https://hosted.weblate.org/engage/blackhole/)
+[![Translation-Status](https://hosted.weblate.org/widgets/soulsound/-/translations/svg-badge.svg)](https://hosted.weblate.org/engage/soulsound/)
 
 ### Don't forget to :star: the repo
 
@@ -16,10 +16,10 @@ An Open-Source Music Player App for all your needs!
 
 [<img src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png"
      alt="Get it on IzzyDroid"
-     height="100">](https://android.izzysoft.de/repo/apk/com.shadow.blackhole)
+     height="100">](https://android.izzysoft.de/repo/apk/com.shadow.soulsound)
 [<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
      alt="Get it on F-Droid"
-     height="100">](https://f-droid.org/packages/com.shadow.blackhole/)
+     height="100">](https://f-droid.org/packages/com.shadow.soulsound/)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [<img src="https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white"
@@ -28,7 +28,7 @@ An Open-Source Music Player App for all your needs!
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [<img src="https://img.shields.io/badge/Telegram-2CA5E0?logo=telegram&logoColor=white"
      alt="Join Telegram Channel"
-     height="60">](https://t.me/blackhole_official)
+     height="60">](https://t.me/soulsound_official)
 
 ## Translations
 
@@ -36,7 +36,7 @@ An Open-Source Music Player App for all your needs!
 - [Russian :ru:](/README.RU.md)
 - [French :fr:](/README.FR.md)
 
-[Translate App on Weblate](https://hosted.weblate.org/projects/blackhole/translations/)
+[Translate App on Weblate](https://hosted.weblate.org/projects/soulsound/translations/)
 
 ## Features
 
@@ -136,7 +136,7 @@ Have a look at some [common Issues](https://github.com/Sangwan5688/BlackHole/wik
 
 ## Want to test Beta Versions? Need help??
 
-You can join our [Telegram Channel](https://t.me/blackhole_official) or [Telegram Group](https://t.me/joinchat/fHDC1AWnOhw0ZmI9), if you have any query, or need help with something as well as to get beta updates of the project.
+You can join our [Telegram Channel](https://t.me/soulsound_official) or [Telegram Group](https://t.me/joinchat/fHDC1AWnOhw0ZmI9), if you have any query, or need help with something as well as to get beta updates of the project.
 
 ## Liked my work?
 

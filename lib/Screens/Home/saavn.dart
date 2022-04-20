@@ -1,19 +1,20 @@
 
+
 import 'dart:io';
 
-import 'package:APIs/api.dart';
-import 'package:CustomWidgets/collage.dart';
-import 'package:CustomWidgets/horizontal_albumlist.dart';
-import 'package:CustomWidgets/like_button.dart';
-import 'package:CustomWidgets/on_hover.dart';
-import 'package:CustomWidgets/snackbar.dart';
-import 'package:CustomWidgets/song_tile_trailing_menu.dart';
-import 'package:Helpers/format.dart';
-import 'package:Helpers/mediaitem_converter.dart';
-import 'package:Screens/Common/song_list.dart';
-import 'package:Screens/Library/liked.dart';
-import 'package:Screens/Player/audioplayer.dart';
-import 'package:Screens/Search/artists.dart';
+import 'package:soulsound/APIs/api.dart';
+import 'package:soulsound/CustomWidgets/collage.dart';
+import 'package:soulsound/CustomWidgets/horizontal_albumlist.dart';
+import 'package:soulsound/CustomWidgets/like_button.dart';
+import 'package:soulsound/CustomWidgets/on_hover.dart';
+import 'package:soulsound/CustomWidgets/snackbar.dart';
+import 'package:soulsound/CustomWidgets/song_tile_trailing_menu.dart';
+import 'package:soulsound/Helpers/format.dart';
+import 'package:soulsound/Helpers/mediaitem_converter.dart';
+import 'package:soulsound/Screens/Common/song_list.dart';
+import 'package:soulsound/Screens/Library/liked.dart';
+import 'package:soulsound/Screens/Player/audioplayer.dart';
+import 'package:soulsound/Screens/Search/artists.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';

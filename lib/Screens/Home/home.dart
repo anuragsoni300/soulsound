@@ -1,21 +1,22 @@
 import 'dart:io';
 import 'dart:math';
 
-import 'package:CustomWidgets/custom_physics.dart';
-import 'package:CustomWidgets/gradient_containers.dart';
-import 'package:CustomWidgets/miniplayer.dart';
-import 'package:CustomWidgets/snackbar.dart';
-import 'package:Helpers/backup_restore.dart';
-import 'package:Helpers/downloads_checker.dart';
-import 'package:Helpers/supabase.dart';
-import 'package:Screens/Home/saavn.dart';
-import 'package:Screens/Library/library.dart';
-import 'package:Screens/LocalMusic/downed_songs.dart';
-import 'package:Screens/Search/search.dart';
-import 'package:Screens/Settings/setting.dart';
-import 'package:Screens/Top Charts/top.dart';
-import 'package:Screens/YouTube/youtube_home.dart';
-import 'package:Services/ext_storage_provider.dart';
+import 'package:soulsound/CustomWidgets/custom_physics.dart';
+import 'package:soulsound/CustomWidgets/gradient_containers.dart';
+import 'package:soulsound/CustomWidgets/miniplayer.dart';
+import 'package:soulsound/CustomWidgets/snackbar.dart';
+import 'package:soulsound/CustomWidgets/textinput_dialog.dart';
+import 'package:soulsound/Helpers/backup_restore.dart';
+import 'package:soulsound/Helpers/downloads_checker.dart';
+import 'package:soulsound/Helpers/supabase.dart';
+import 'package:soulsound/Screens/Home/saavn.dart';
+import 'package:soulsound/Screens/Library/library.dart';
+import 'package:soulsound/Screens/LocalMusic/downed_songs.dart';
+import 'package:soulsound/Screens/Search/search.dart';
+import 'package:soulsound/Screens/Settings/setting.dart';
+import 'package:soulsound/Screens/Top Charts/top.dart';
+import 'package:soulsound/Screens/YouTube/youtube_home.dart';
+import 'package:soulsound/Services/ext_storage_provider.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -210,7 +211,7 @@ class _HomePageState extends State<HomePage> {
           ) as String;
           if (autoBackPath == '') {
             ExtStorageProvider.getExtStorage(
-              dirName: 'BlackHole/Backups',
+              dirName: 'SoulSound/Backups',
             ).then((value) {
               Hive.box('settings').put('autoBackPath', value);
               createBackup(
@@ -218,7 +219,7 @@ class _HomePageState extends State<HomePage> {
                 checked,
                 boxNames,
                 path: value,
-                fileName: 'BlackHole_AutoBackup',
+                fileName: 'SoulSound_AutoBackup',
                 showDialog: false,
               );
             });
@@ -228,7 +229,7 @@ class _HomePageState extends State<HomePage> {
               checked,
               boxNames,
               path: autoBackPath,
-              fileName: 'BlackHole_AutoBackup',
+              fileName: 'SoulSound_AutoBackup',
               showDialog: false,
             );
           }
@@ -283,8 +284,7 @@ class _HomePageState extends State<HomePage> {
                   flexibleSpace: FlexibleSpaceBar(
                     title: RichText(
                       text: TextSpan(
-                        text:
-                            'Soul Sound', //AppLocalizations.of(context)!.appTitle,
+                        text: AppLocalizations.of(context)!.appTitle,
                         style: const TextStyle(
                           fontSize: 30.0,
                           fontWeight: FontWeight.w500,
@@ -458,27 +458,10 @@ class _HomePageState extends State<HomePage> {
                                       builder: (context, child) {
                                         return GestureDetector(
                                           child: AnimatedContainer(
-                                            width: (!_scrollController
-                                                        .hasClients ||
-                                                    _scrollController
-                                                            // ignore: invalid_use_of_protected_member
-                                                            .positions
-                                                            .length >
-                                                        1)
-                                                ? MediaQuery.of(context)
+                                            width: MediaQuery.of(context)
                                                     .size
-                                                    .width
-                                                : max(
-                                                    MediaQuery.of(context)
-                                                            .size
-                                                            .width * 0.8 -
-                                                        _scrollController.offset
-                                                            .roundToDouble(),
-                                                    MediaQuery.of(context)
-                                                            .size
-                                                            .width -
-                                                        75,
-                                                  ),
+                                                    .width *
+                                                0.8,
                                             height: 52.0,
                                             duration: const Duration(
                                               milliseconds: 150,

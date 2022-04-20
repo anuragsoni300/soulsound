@@ -1,6 +1,22 @@
+
+
 import 'dart:io';
+
 import 'package:audio_service/audio_service.dart';
-import 'package:blackhole/Screens/Player/audioplayer.dart';
+import 'package:soulsound/Helpers/config.dart';
+import 'package:soulsound/Helpers/handle_native.dart';
+import 'package:soulsound/Helpers/route_handler.dart';
+import 'package:soulsound/Screens/Home/home.dart';
+import 'package:soulsound/Screens/Library/downloads.dart';
+import 'package:soulsound/Screens/Library/nowplaying.dart';
+import 'package:soulsound/Screens/Library/playlists.dart';
+import 'package:soulsound/Screens/Library/recent.dart';
+import 'package:soulsound/Screens/Login/auth.dart';
+import 'package:soulsound/Screens/Login/pref.dart';
+import 'package:soulsound/Screens/Player/audioplayer.dart';
+import 'package:soulsound/Screens/Settings/setting.dart';
+import 'package:soulsound/Services/audio_service.dart';
+import 'package:soulsound/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_displaymode/flutter_displaymode.dart';
@@ -10,13 +26,12 @@ import 'package:get_it/get_it.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:path_provider/path_provider.dart';
 
-
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   Paint.enableDithering = true;
 
   if (Platform.isWindows || Platform.isLinux || Platform.isMacOS) {
-    await Hive.initFlutter('BlackHole');
+    await Hive.initFlutter('SoulSound');
   } else {
     await Hive.initFlutter();
   }
@@ -55,10 +70,12 @@ Future<void> startService() async {
     builder: () => AudioPlayerHandlerImpl(),
     config: AudioServiceConfig(
       androidNotificationChannelId: 'com.shadow.soulsound.channel.audio',
-      androidNotificationChannelName: 'BlackHole',
+      androidNotificationChannelName: 'SoulSound',
       androidNotificationOngoing: true,
       androidNotificationIcon: 'drawable/ic_stat_music_note',
       androidShowNotificationBadge: true,
+      // androidStopForegroundOnPause: Hive.box('settings')
+      // .get('stopServiceOnPause', defaultValue: true) as bool,
       notificationColor: Colors.grey[900],
     ),
   );
@@ -73,8 +90,8 @@ Future<void> openHiveBox(String boxName, {bool limit = false}) async {
     File dbFile = File('$dirPath/$boxName.hive');
     File lockFile = File('$dirPath/$boxName.lock');
     if (Platform.isWindows || Platform.isLinux || Platform.isMacOS) {
-      dbFile = File('$dirPath/BlackHole/$boxName.hive');
-      lockFile = File('$dirPath/BlackHole/$boxName.lock');
+      dbFile = File('$dirPath/SoulSound/$boxName.hive');
+      lockFile = File('$dirPath/SoulSound/$boxName.lock');
     }
     await dbFile.delete();
     await lockFile.delete();
@@ -167,7 +184,7 @@ class _MyAppState extends State<MyApp> {
     ]);
 
     return MaterialApp(
-      title: 'BlackHole',
+      title: 'SoulSound',
       restorationScopeId: 'soulsound',
       debugShowCheckedModeBanner: false,
       themeMode: AppTheme.themeMode,
@@ -185,20 +202,20 @@ class _MyAppState extends State<MyApp> {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: const [
-        // Locale('zh', ''), // Chinese
-        // Locale('cs', ''), // Czech
-        // Locale('nl', ''), // Dutch
+        Locale('zh', ''), // Chinese
+        Locale('cs', ''), // Czech
+        Locale('nl', ''), // Dutch
         Locale('en', ''), // English, no country code
-        // Locale('fr', ''), // French
-        // Locale('de', ''), // German
-        // Locale('hi', ''), // Hindi
-        // Locale('id', ''), // Indonesian
-        // Locale('pt', ''), // Portuguese
-        // Locale('ru', ''), // Russian
-        // Locale('es', ''), // Spanish
-        // Locale('ta', ''), // Tamil
-        // Locale('tr', ''), // Turkish
-        // Locale('uk', ''), // Ukrainian
+        Locale('fr', ''), // French
+        Locale('de', ''), // German
+        Locale('hi', ''), // Hindi
+        Locale('id', ''), // Indonesian
+        Locale('pt', ''), // Portuguese
+        Locale('ru', ''), // Russian
+        Locale('es', ''), // Spanish
+        Locale('ta', ''), // Tamil
+        Locale('tr', ''), // Turkish
+        Locale('uk', ''), // Ukrainian
       ],
       routes: {
         '/': (context) => initialFuntion(),

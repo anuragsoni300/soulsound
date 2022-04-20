@@ -1,4 +1,5 @@
 
+
 import 'dart:io';
 
 import 'package:flutter/services.dart';
@@ -6,11 +7,11 @@ import 'package:flutter/services.dart';
 // ignore: avoid_classes_with_only_static_members
 class NativeMethod {
   static const MethodChannel sharedTextChannel =
-      MethodChannel('com.shadow.sharedTextChannel');
+      MethodChannel('com.shadow.soulsound/sharedTextChannel');
   static const MethodChannel registermediaChannel =
-      MethodChannel('com.shadow.registerMedia');
+      MethodChannel('com.shadow.soulsound/registerMedia');
   static const MethodChannel intentChannel =
-      MethodChannel('com.shadow.intentChannel');
+      MethodChannel('com.shadow.soulsound/intentChannel');
 
   static Future<void> handleIntent() async {
     // final _intent = await sharedTextChannel.invokeMethod('getSharedText');

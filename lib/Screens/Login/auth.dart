@@ -1,8 +1,9 @@
 
-import 'package:CustomWidgets/gradient_containers.dart';
-import 'package:Helpers/backup_restore.dart';
-import 'package:Helpers/config.dart';
-import 'package:Helpers/supabase.dart';
+
+import 'package:soulsound/CustomWidgets/gradient_containers.dart';
+import 'package:soulsound/Helpers/backup_restore.dart';
+import 'package:soulsound/Helpers/config.dart';
+import 'package:soulsound/Helpers/supabase.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:get_it/get_it.dart';

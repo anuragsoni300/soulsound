@@ -1,8 +1,9 @@
 
-import 'package:CustomWidgets/like_button.dart';
-import 'package:CustomWidgets/on_hover.dart';
-import 'package:CustomWidgets/song_tile_trailing_menu.dart';
-import 'package:Helpers/mediaitem_converter.dart';
+
+import 'package:soulsound/CustomWidgets/like_button.dart';
+import 'package:soulsound/CustomWidgets/on_hover.dart';
+import 'package:soulsound/CustomWidgets/song_tile_trailing_menu.dart';
+import 'package:soulsound/Helpers/mediaitem_converter.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 

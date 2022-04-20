@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.10)
 project(runner LANGUAGES CXX)
 
-set(BINARY_NAME "blackhole")
-set(APPLICATION_ID "com.shadow.blackhole")
+set(BINARY_NAME "soulsound")
+set(APPLICATION_ID "com.shadow.soulsound")
 
 cmake_policy(SET CMP0063 NEW)
 

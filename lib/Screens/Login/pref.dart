@@ -1,7 +1,8 @@
 
-import 'package:CustomWidgets/gradient_containers.dart';
-import 'package:CustomWidgets/snackbar.dart';
-import 'package:Helpers/countrycodes.dart';
+
+import 'package:soulsound/CustomWidgets/gradient_containers.dart';
+import 'package:soulsound/CustomWidgets/snackbar.dart';
+import 'package:soulsound/Helpers/countrycodes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:hive/hive.dart';

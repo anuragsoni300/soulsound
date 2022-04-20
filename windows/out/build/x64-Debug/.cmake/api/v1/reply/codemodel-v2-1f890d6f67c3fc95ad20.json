@@ -113,7 +113,7 @@
 						0,
 						1
 					],
-					"name" : "blackhole",
+					"name" : "soulsound",
 					"targetIndexes" : 
 					[
 						1,
@@ -178,9 +178,9 @@
 			[
 				{
 					"directoryIndex" : 2,
-					"id" : "blackhole::@056c4f61b0156d1d9b06",
-					"jsonFile" : "target-blackhole-Debug-97a0c777659970d44c25.json",
-					"name" : "blackhole",
+					"id" : "soulsound::@056c4f61b0156d1d9b06",
+					"jsonFile" : "target-soulsound-Debug-97a0c777659970d44c25.json",
+					"name" : "soulsound",
 					"projectIndex" : 1
 				},
 				{
@@ -231,8 +231,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "E:/GitHub/blackhole/windows/out/build/x64-Debug",
-		"source" : "E:/GitHub/blackhole/windows"
+		"build" : "E:/GitHub/soulsound/windows/out/build/x64-Debug",
+		"source" : "E:/GitHub/soulsound/windows"
 	},
 	"version" : 
 	{

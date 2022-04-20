@@ -1,9 +1,10 @@
 
-import 'package:CustomWidgets/on_hover.dart';
-import 'package:CustomWidgets/search_bar.dart';
-import 'package:Screens/YouTube/youtube_playlist.dart';
-import 'package:Screens/YouTube/youtube_search.dart';
-import 'package:Services/youtube_services.dart';
+
+import 'package:soulsound/CustomWidgets/on_hover.dart';
+import 'package:soulsound/CustomWidgets/search_bar.dart';
+import 'package:soulsound/Screens/YouTube/youtube_playlist.dart';
+import 'package:soulsound/Screens/YouTube/youtube_search.dart';
+import 'package:soulsound/Services/youtube_services.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';

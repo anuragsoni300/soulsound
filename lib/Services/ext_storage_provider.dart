@@ -1,3 +1,5 @@
+
+
 import 'dart:io';
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -30,7 +32,7 @@ class ExtStorageProvider {
 
           // getting main path
           final String newPath = directory!.path
-              .replaceFirst('Android/data/com.shadow.files', dirName);
+              .replaceFirst('Android/data/com.shadow.soulsound/files', dirName);
 
           directory = Directory(newPath);
 

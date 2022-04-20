@@ -1,9 +1,10 @@
 
+
 import 'dart:io';
 
 import 'package:audio_service/audio_service.dart';
-import 'package:CustomWidgets/gradient_containers.dart';
-import 'package:Screens/Player/audioplayer.dart';
+import 'package:soulsound/CustomWidgets/gradient_containers.dart';
+import 'package:soulsound/Screens/Player/audioplayer.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';

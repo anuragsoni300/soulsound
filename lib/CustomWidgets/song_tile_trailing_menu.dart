@@ -1,12 +1,13 @@
 
+
 import 'package:audio_service/audio_service.dart';
-import 'package:CustomWidgets/add_playlist.dart';
-import 'package:Helpers/add_mediaitem_to_queue.dart';
-import 'package:Helpers/mediaitem_converter.dart';
-import 'package:Screens/Common/song_list.dart';
-import 'package:Screens/Search/albums.dart';
-import 'package:Screens/Search/search.dart';
-import 'package:Services/youtube_services.dart';
+import 'package:soulsound/CustomWidgets/add_playlist.dart';
+import 'package:soulsound/Helpers/add_mediaitem_to_queue.dart';
+import 'package:soulsound/Helpers/mediaitem_converter.dart';
+import 'package:soulsound/Screens/Common/song_list.dart';
+import 'package:soulsound/Screens/Search/albums.dart';
+import 'package:soulsound/Screens/Search/search.dart';
+import 'package:soulsound/Services/youtube_services.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';

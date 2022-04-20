@@ -1,13 +1,14 @@
 
-import 'package:APIs/api.dart';
-import 'package:CustomWidgets/bouncy_sliver_scroll_view.dart';
-import 'package:CustomWidgets/copy_clipboard.dart';
-import 'package:CustomWidgets/download_button.dart';
-import 'package:CustomWidgets/empty_screen.dart';
-import 'package:CustomWidgets/gradient_containers.dart';
-import 'package:CustomWidgets/miniplayer.dart';
-import 'package:Screens/Common/song_list.dart';
-import 'package:Screens/Search/artists.dart';
+
+import 'package:soulsound/APIs/api.dart';
+import 'package:soulsound/CustomWidgets/bouncy_sliver_scroll_view.dart';
+import 'package:soulsound/CustomWidgets/copy_clipboard.dart';
+import 'package:soulsound/CustomWidgets/download_button.dart';
+import 'package:soulsound/CustomWidgets/empty_screen.dart';
+import 'package:soulsound/CustomWidgets/gradient_containers.dart';
+import 'package:soulsound/CustomWidgets/miniplayer.dart';
+import 'package:soulsound/Screens/Common/song_list.dart';
+import 'package:soulsound/Screens/Search/artists.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';

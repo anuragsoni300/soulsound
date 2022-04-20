@@ -1,11 +1,12 @@
 
-import 'package:CustomWidgets/bouncy_sliver_scroll_view.dart';
-import 'package:CustomWidgets/copy_clipboard.dart';
-import 'package:CustomWidgets/gradient_containers.dart';
-import 'package:CustomWidgets/miniplayer.dart';
-import 'package:CustomWidgets/song_tile_trailing_menu.dart';
-import 'package:Screens/Player/audioplayer.dart';
-import 'package:Services/youtube_services.dart';
+
+import 'package:soulsound/CustomWidgets/bouncy_sliver_scroll_view.dart';
+import 'package:soulsound/CustomWidgets/copy_clipboard.dart';
+import 'package:soulsound/CustomWidgets/gradient_containers.dart';
+import 'package:soulsound/CustomWidgets/miniplayer.dart';
+import 'package:soulsound/CustomWidgets/song_tile_trailing_menu.dart';
+import 'package:soulsound/Screens/Player/audioplayer.dart';
+import 'package:soulsound/Services/youtube_services.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';

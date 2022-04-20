@@ -1,8 +1,9 @@
 
-import 'package:CustomWidgets/snackbar.dart';
-import 'package:CustomWidgets/textinput_dialog.dart';
-import 'package:Helpers/audio_query.dart';
-import 'package:Screens/LocalMusic/downed_songs.dart';
+
+import 'package:soulsound/CustomWidgets/snackbar.dart';
+import 'package:soulsound/CustomWidgets/textinput_dialog.dart';
+import 'package:soulsound/Helpers/audio_query.dart';
+import 'package:soulsound/Screens/LocalMusic/downed_songs.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:on_audio_query/on_audio_query.dart';

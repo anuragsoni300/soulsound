@@ -1,20 +1,22 @@
+
+
 import 'dart:io';
 
-import 'package:CustomWidgets/copy_clipboard.dart';
-import 'package:CustomWidgets/gradient_containers.dart';
-import 'package:CustomWidgets/popup.dart';
-import 'package:CustomWidgets/snackbar.dart';
-import 'package:CustomWidgets/textinput_dialog.dart';
-import 'package:Helpers/backup_restore.dart';
-import 'package:Helpers/config.dart';
-import 'package:Helpers/countrycodes.dart';
-import 'package:Helpers/picker.dart';
-import 'package:Helpers/supabase.dart';
-import 'package:Screens/Home/saavn.dart' as home_screen;
-import 'package:Screens/Settings/player_gradient.dart';
-import 'package:Screens/Top Charts/top.dart' as top_screen;
-import 'package:Services/ext_storage_provider.dart';
-import 'package:main.dart';
+import 'package:soulsound/CustomWidgets/copy_clipboard.dart';
+import 'package:soulsound/CustomWidgets/gradient_containers.dart';
+import 'package:soulsound/CustomWidgets/popup.dart';
+import 'package:soulsound/CustomWidgets/snackbar.dart';
+import 'package:soulsound/CustomWidgets/textinput_dialog.dart';
+import 'package:soulsound/Helpers/backup_restore.dart';
+import 'package:soulsound/Helpers/config.dart';
+import 'package:soulsound/Helpers/countrycodes.dart';
+import 'package:soulsound/Helpers/picker.dart';
+import 'package:soulsound/Helpers/supabase.dart';
+import 'package:soulsound/Screens/Home/saavn.dart' as home_screen;
+import 'package:soulsound/Screens/Settings/player_gradient.dart';
+import 'package:soulsound/Screens/Top Charts/top.dart' as top_screen;
+import 'package:soulsound/Services/ext_storage_provider.dart';
+import 'package:soulsound/main.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -41,7 +43,7 @@ class _SettingPageState extends State<SettingPage> {
       .get('downloadPath', defaultValue: '/storage/emulated/0/Music') as String;
   String autoBackPath = Hive.box('settings').get(
     'autoBackPath',
-    defaultValue: '/storage/emulated/0/BlackHole/Backups',
+    defaultValue: '/storage/emulated/0/SoulSound/Backups',
   ) as String;
   final ValueNotifier<bool> includeOrExclude = ValueNotifier<bool>(
     Hive.box('settings').get('includeOrExclude', defaultValue: false) as bool,
@@ -2368,7 +2370,7 @@ class _SettingPageState extends State<SettingPage> {
                     ),
                   ),
                 ),
-              ],
+               ],
             ),
           ),
         ],

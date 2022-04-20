@@ -1,22 +1,19 @@
-
-import 'package:app_links/app_links.dart';
-import 'package:APIs/api.dart';
-import 'package:APIs/spotify_api.dart';
-import 'package:CustomWidgets/collage.dart';
-import 'package:CustomWidgets/gradient_containers.dart';
-import 'package:CustomWidgets/miniplayer.dart';
-import 'package:CustomWidgets/snackbar.dart';
-import 'package:CustomWidgets/textinput_dialog.dart';
-import 'package:Helpers/import_export_playlist.dart';
-import 'package:Helpers/playlist.dart';
-import 'package:Helpers/search_add_playlist.dart';
-import 'package:Screens/Library/liked.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:hive/hive.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:soulsound/APIs/api.dart';
+import 'package:soulsound/APIs/spotify_api.dart';
+import 'package:soulsound/CustomWidgets/collage.dart';
+import 'package:soulsound/CustomWidgets/gradient_containers.dart';
+import 'package:soulsound/CustomWidgets/miniplayer.dart';
+import 'package:soulsound/CustomWidgets/snackbar.dart';
+import 'package:soulsound/CustomWidgets/textinput_dialog.dart';
+import 'package:soulsound/Helpers/import_export_playlist.dart';
+import 'package:soulsound/Helpers/playlist.dart';
+import 'package:soulsound/Helpers/search_add_playlist.dart';
+import 'package:soulsound/Screens/Library/liked.dart';
 
 class PlaylistScreen extends StatefulWidget {
   @override
@@ -120,224 +117,6 @@ class _PlaylistScreenState extends State<PlaylistScreen> {
                             await importPlaylist(context, playlistNames);
                         settingsBox.put('playlistNames', playlistNames);
                         setState(() {});
-                      },
-                    ),
-                    ListTile(
-                      title: Text(AppLocalizations.of(context)!.importSpotify),
-                      leading: Card(
-                        elevation: 0,
-                        color: Colors.transparent,
-                        child: SizedBox.square(
-                          dimension: 50,
-                          child: Center(
-                            child: Icon(
-                              MdiIcons.spotify,
-                              color: Theme.of(context).iconTheme.color,
-                            ),
-                          ),
-                        ),
-                      ),
-                      onTap: () {
-                        String code;
-                        launch(
-                          SpotifyApi().requestAuthorization(),
-                        );
-
-                        AppLinks().uriLinkStream.listen(
-                          (
-                            Uri uri,
-                          ) async {
-                            final link = uri.toString();
-                            closeWebView();
-                            if (link.contains('code=')) {
-                              code = link.split('code=')[1];
-                              await fetchPlaylists(
-                                code,
-                                context,
-                                playlistNames,
-                                settingsBox,
-                              );
-                              setState(() {
-                                playlistNames = List.from(playlistNames);
-                              });
-                            }
-                          },
-                        );
-                      },
-                    ),
-                    ListTile(
-                      title: Text(AppLocalizations.of(context)!.importYt),
-                      leading: Card(
-                        elevation: 0,
-                        color: Colors.transparent,
-                        child: SizedBox.square(
-                          dimension: 50,
-                          child: Center(
-                            child: Icon(
-                              MdiIcons.youtube,
-                              color: Theme.of(context).iconTheme.color,
-                            ),
-                          ),
-                        ),
-                      ),
-                      onTap: () async {
-                        await showTextInputDialog(
-                          context: context,
-                          title:
-                              AppLocalizations.of(context)!.enterPlaylistLink,
-                          initialText: '',
-                          keyboardType: TextInputType.url,
-                          onSubmitted: (value) async {
-                            final String link = value.trim();
-                            Navigator.pop(context);
-                            final Map data =
-                                await SearchAddPlaylist.addYtPlaylist(link);
-                            if (data.isNotEmpty) {
-                              if (data['title'] == '' && data['count'] == 0) {
-                                ShowSnackBar().showSnackBar(
-                                  context,
-                                  '${AppLocalizations.of(context)!.failedImport}\n${AppLocalizations.of(context)!.confirmViewable}',
-                                  duration: const Duration(seconds: 3),
-                                );
-                              } else {
-                                playlistNames.add(
-                                  data['title'] == ''
-                                      ? 'Yt Playlist'
-                                      : data['title'],
-                                );
-                                settingsBox.put(
-                                  'playlistNames',
-                                  playlistNames,
-                                );
-
-                                await SearchAddPlaylist.showProgress(
-                                  data['count'] as int,
-                                  context,
-                                  SearchAddPlaylist.ytSongsAdder(
-                                    data['title'].toString(),
-                                    data['tracks'] as List,
-                                  ),
-                                );
-                                setState(() {
-                                  playlistNames = playlistNames;
-                                });
-                              }
-                            } else {
-                              ShowSnackBar().showSnackBar(
-                                context,
-                                AppLocalizations.of(context)!.failedImport,
-                              );
-                            }
-                          },
-                        );
-                      },
-                    ),
-                    ListTile(
-                      title: Text(AppLocalizations.of(context)!.importResso),
-                      leading: Card(
-                        elevation: 0,
-                        color: Colors.transparent,
-                        child: SizedBox.square(
-                          dimension: 50,
-                          child: Center(
-                            child: Icon(
-                              Icons.music_note_rounded,
-                              color: Theme.of(context).iconTheme.color,
-                            ),
-                          ),
-                        ),
-                      ),
-                      onTap: () async {
-                        await showTextInputDialog(
-                          context: context,
-                          title:
-                              AppLocalizations.of(context)!.enterPlaylistLink,
-                          initialText: '',
-                          keyboardType: TextInputType.url,
-                          onSubmitted: (value) async {
-                            final String link = value.trim();
-                            Navigator.pop(context);
-                            final Map data =
-                                await SearchAddPlaylist.addRessoPlaylist(link);
-                            if (data.isNotEmpty) {
-                              String playName = data['title'].toString();
-                              while (playlistNames.contains(playName) ||
-                                  await Hive.boxExists(value)) {
-                                // ignore: use_string_buffers
-                                playName = '$playName (1)';
-                              }
-                              playlistNames.add(playName);
-                              settingsBox.put(
-                                'playlistNames',
-                                playlistNames,
-                              );
-
-                              await SearchAddPlaylist.showProgress(
-                                data['count'] as int,
-                                context,
-                                SearchAddPlaylist.ressoSongsAdder(
-                                  playName,
-                                  data['tracks'] as List,
-                                ),
-                              );
-                              setState(() {
-                                playlistNames = playlistNames;
-                              });
-                            } else {
-                              ShowSnackBar().showSnackBar(
-                                context,
-                                AppLocalizations.of(context)!.failedImport,
-                              );
-                            }
-                          },
-                        );
-                      },
-                    ),
-                    ListTile(
-                      title: Text(AppLocalizations.of(context)!.importJioSaavn),
-                      leading: Card(
-                        elevation: 0,
-                        color: Colors.transparent,
-                        child: SizedBox.square(
-                          dimension: 50,
-                          child: Center(
-                            child: Icon(
-                              Icons.music_note_rounded,
-                              color: Theme.of(context).iconTheme.color,
-                            ),
-                          ),
-                        ),
-                      ),
-                      onTap: () async {
-                        await showTextInputDialog(
-                          context: context,
-                          title:
-                              AppLocalizations.of(context)!.enterPlaylistLink,
-                          initialText: '',
-                          keyboardType: TextInputType.url,
-                          onSubmitted: (value) async {
-                            final String link = value.trim();
-                            Navigator.pop(context);
-                            final Map data =
-                                await SearchAddPlaylist.addJioSaavnPlaylist(
-                              link,
-                            );
-
-                            if (data.isNotEmpty) {
-                              final String playName = data['title'].toString();
-                              addPlaylist(playName, data['tracks'] as List);
-                              playlistNames.add(playName);
-                              setState(() {
-                                playlistNames = playlistNames;
-                              });
-                            } else {
-                              ShowSnackBar().showSnackBar(
-                                context,
-                                AppLocalizations.of(context)!.failedImport,
-                              );
-                            }
-                          },
-                        );
                       },
                     ),
                     if (playlistNames.isEmpty)

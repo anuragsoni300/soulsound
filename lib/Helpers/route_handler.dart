@@ -1,8 +1,9 @@
 
-import 'package:APIs/api.dart';
-import 'package:Helpers/audio_query.dart';
-import 'package:Screens/Common/song_list.dart';
-import 'package:Screens/Player/audioplayer.dart';
+
+import 'package:soulsound/APIs/api.dart';
+import 'package:soulsound/Helpers/audio_query.dart';
+import 'package:soulsound/Screens/Common/song_list.dart';
+import 'package:soulsound/Screens/Player/audioplayer.dart';
 import 'package:flutter/material.dart';
 import 'package:on_audio_query/on_audio_query.dart';
 

@@ -1,8 +1,9 @@
 
+
 import 'dart:io';
 
-import 'package:Helpers/audio_query.dart';
-import 'package:Screens/Player/audioplayer.dart';
+import 'package:soulsound/Helpers/audio_query.dart';
+import 'package:soulsound/Screens/Player/audioplayer.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

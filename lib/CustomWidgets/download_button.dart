@@ -1,7 +1,8 @@
 
-import 'package:APIs/api.dart';
-import 'package:CustomWidgets/snackbar.dart';
-import 'package:Services/download.dart';
+
+import 'package:soulsound/APIs/api.dart';
+import 'package:soulsound/CustomWidgets/snackbar.dart';
+import 'package:soulsound/Services/download.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:hive/hive.dart';

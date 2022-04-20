@@ -1,9 +1,10 @@
 
-import 'package:CustomWidgets/custom_physics.dart';
-import 'package:CustomWidgets/empty_screen.dart';
-import 'package:Helpers/countrycodes.dart';
-import 'package:Screens/Search/search.dart';
-import 'package:Screens/Settings/setting.dart';
+
+import 'package:soulsound/CustomWidgets/custom_physics.dart';
+import 'package:soulsound/CustomWidgets/empty_screen.dart';
+import 'package:soulsound/Helpers/countrycodes.dart';
+import 'package:soulsound/Screens/Search/search.dart';
+import 'package:soulsound/Screens/Settings/setting.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';

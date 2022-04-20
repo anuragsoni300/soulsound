@@ -1,5 +1,6 @@
 
-import 'package:Helpers/config.dart';
+
+import 'package:soulsound/Helpers/config.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:palette_generator/palette_generator.dart';

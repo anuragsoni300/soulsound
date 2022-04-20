@@ -1,10 +1,11 @@
 
+
 import 'dart:convert';
 
-import 'package:APIs/api.dart';
-import 'package:CustomWidgets/gradient_containers.dart';
-import 'package:Helpers/playlist.dart';
-import 'package:Services/youtube_services.dart';
+import 'package:soulsound/APIs/api.dart';
+import 'package:soulsound/CustomWidgets/gradient_containers.dart';
+import 'package:soulsound/Helpers/playlist.dart';
+import 'package:soulsound/Services/youtube_services.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:http/http.dart';
