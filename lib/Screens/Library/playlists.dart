@@ -97,28 +97,6 @@ class _PlaylistScreenState extends State<PlaylistScreen> {
                         setState(() {});
                       },
                     ),
-                    ListTile(
-                      title: Text(AppLocalizations.of(context)!.importFile),
-                      leading: Card(
-                        elevation: 0,
-                        color: Colors.transparent,
-                        child: SizedBox.square(
-                          dimension: 50,
-                          child: Center(
-                            child: Icon(
-                              MdiIcons.import,
-                              color: Theme.of(context).iconTheme.color,
-                            ),
-                          ),
-                        ),
-                      ),
-                      onTap: () async {
-                        playlistNames =
-                            await importPlaylist(context, playlistNames);
-                        settingsBox.put('playlistNames', playlistNames);
-                        setState(() {});
-                      },
-                    ),
                     if (playlistNames.isEmpty)
                       const SizedBox()
                     else

@@ -1,16 +1,14 @@
-
-
 import 'package:audio_service/audio_service.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:hive/hive.dart';
+import 'package:on_audio_query/on_audio_query.dart';
 import 'package:soulsound/CustomWidgets/collage.dart';
 import 'package:soulsound/CustomWidgets/gradient_containers.dart';
 import 'package:soulsound/CustomWidgets/snackbar.dart';
 import 'package:soulsound/CustomWidgets/textinput_dialog.dart';
 import 'package:soulsound/Helpers/audio_query.dart';
 import 'package:soulsound/Helpers/playlist.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:hive/hive.dart';
-import 'package:on_audio_query/on_audio_query.dart';
 
 class AddToOffPlaylist {
   OfflineAudioQuery offlineAudioQuery = OfflineAudioQuery();

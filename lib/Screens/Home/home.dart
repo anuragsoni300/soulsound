@@ -289,10 +289,10 @@ class _HomePageState extends State<HomePage> {
                           fontSize: 30.0,
                           fontWeight: FontWeight.w500,
                         ),
-                        children: <TextSpan>[
+                        children: const <TextSpan>[
                           TextSpan(
-                            text: appVersion != null ? '' : '\nv$appVersion',
-                            style: const TextStyle(
+                            text: '',
+                            style: TextStyle(
                               fontSize: 7.0,
                             ),
                           ),

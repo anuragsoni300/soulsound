@@ -218,7 +218,7 @@ class _MyAppState extends State<MyApp> {
         Locale('uk', ''), // Ukrainian
       ],
       routes: {
-        '/': (context) => initialFuntion(),
+        '/': (context) => HomePage(),
         '/pref': (context) => const PrefScreen(),
         '/setting': (context) => const SettingPage(),
         '/playlists': (context) => PlaylistScreen(),
